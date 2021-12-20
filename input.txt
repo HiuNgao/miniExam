@@ -1,0 +1,13 @@
+1, 1000, Nguyen Van B, 18 13665544 12A3 5.6 
+1, 1001, Nguyen Van A, 18 12244556 12A4 7.7
+1, 1002, NGuyen VAn C, 19 11442255 12A4 8.8
+1, 1003, Nguyen Van D, 19 21144554 12A1 9.9
+1, 1004, Alex, 20 11223355 D12 5.6
+1, 1005, peter, 20 11223344 D14 7.9
+1, 1006, Jean, 20 112254444 D15 9.8
+2, 1101, Alex, 31 445544588 6years Art
+2, 1102, Join, 30 55544455 4years Math
+2, 1103, Nguyen THi Huyen, 34 55446655 6years Scient
+2, 1104, Dao Duong Nhi, 29 554466554 2years Math
+2, 1105, Dong Phuong Hoa, 30 55544455 4years Van
+2, 1106, Ton Ngo Khong, 29 55446656 3years English
