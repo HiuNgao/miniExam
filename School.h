@@ -15,9 +15,13 @@ protected:
 public:
 	School() {};
 		
-	School(int id, string name, int age,string phone) 
-		: m_age{age},m_name{name},m_phone{phone},m_id{id}
+	School(int id, string name,int age, string phone) 
+		: m_name{name},m_id{id},m_age{age},m_phone{phone}
 	{}
+
+	/*School(int age,string phone)
+		: m_phone{phone},m_age{age}
+	{}*/
 
 	virtual void show();
 

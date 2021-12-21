@@ -1,5 +1,5 @@
 
-#include <iostream>
+
 #include <string>
 #include <vector>
 #include <fstream>
@@ -9,6 +9,8 @@
 #include "Utils.h"
 #include "miniExam.h"
 #include<algorithm>
+#include <iostream>
+
 
 
 //
@@ -86,15 +88,15 @@ void menunv()
 }
 
 
-void sortSchool(vector<School*>& list) {
-	cout << "Sort by name" << '\n';
-	std::sort(
-		list.begin(),
-		list.end(),
-		[](const auto& s1, const auto& s2) {return s1->getName() < s2->getName(); }
-	);
-	
-};
+//void sortSchool(vector<School*>& list) {
+//	cout << "Sort by name" << '\n';
+//	std::sort(
+//		list.begin(),
+//		list.end(),
+//		[](const auto& s1, const auto& s2) {return s1->getName() < s2->getName(); }
+//	);
+//	
+//};
 
 
 
@@ -214,31 +216,25 @@ int main()
 {
 
 	
-	
-	
 	vector<School*> list{};
 
 	ifstream fileIn{ "input.txt" };
-	/*ifstream fileOut;
-
-	fileOut.open("output.txt", ios::out);*/
-	// doc du lieu tu file
+	
 	string line;
 	while (getline(fileIn, line)) {
 
 		auto vec = Utils::split(line, ",");
 
 		if (vec.at(0) == "1") {
-			list.push_back(new Bstudent{ stoi(vec.at(1)), vec.at(2) });
+			list.push_back(new Bstudent{ stoi(vec.at(1)), vec.at(2), stoi(vec.at(3)), vec.at(4) });
 		}
 		else if (vec.at(0) == "2") {
-			list.push_back(new Employee{ stoi(vec.at(1)), vec.at(2) });
+			list.push_back(new Employee{ stoi(vec.at(1)), vec.at(2), stoi(vec.at(3)), vec.at(4) });
 		}
 		
 	}
 
-	/*fileOut.close();
-	fileIn.close();*/
+	
 
 
 	int choose;
@@ -271,8 +267,8 @@ int main()
 			removeSchool(list, name);
 			break;
 		case 4:
-			cout << "Sort Members" << '\n';
-			sortSchool(list);
+			/*cout << "Sort Members" << '\n';*/
+			///*sortSchool(list);*/
 			cout << "Sort by name" << '\n';
 			std::sort(
 				list.begin(),

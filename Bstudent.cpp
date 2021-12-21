@@ -3,13 +3,13 @@
 #include <iostream>
 using namespace std;
 
-//Bstudent::Bstudent()
-//	: School()
-//{};
-//
-//Bstudent::Bstudent(int id, string name, int age, string phone)
-//	: School{ id,name,age,phone }
-//{};
+Bstudent::Bstudent()
+	: School{}
+{};
+
+Bstudent::Bstudent(int id, string name, int age, string phone)
+	: School{ id,name,age,phone }
+{};
 
 
 void Bstudent::input()
@@ -19,13 +19,13 @@ void Bstudent::input()
 	School::input();
 
 	cout << "Enter Class: "; getline(cin, m_class);
-	cout << "Enter Point: "; cin >> m_point; cin.ignore(1000, '\n');
+	
 };
 
 void Bstudent::show()
 {
 	School::show();
-	cout << "Student in class " << m_class << "Point years " << m_point << '\n';
+	cout << "Student in class " << m_class << '\n';
 };
 
 string Bstudent::getClass()
